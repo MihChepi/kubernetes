@@ -28,7 +28,7 @@ define('DB_USER', 'admin');
 define('DB_PASSWORD', 'admin');
 
 /** Имя сервера MySQL */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'mysql');
 
 /** Кодировка базы данных для создания таблиц. */
 define('DB_CHARSET', 'utf8');
@@ -45,14 +45,16 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'asddddwqqwdsadsadwd;kpokpoklllkkok12312312YUKGEQWLEHQWE@#$%^&&&#');
-define('SECURE_AUTH_KEY',  'asddddwqqwdsadsadwd;kpokpoklllkkok12312312YUKGEQWLEHQWE@#$%^&&&#');
-define('LOGGED_IN_KEY',    'asddddwqqwdsadsadwd;kpokpoklllkkok12312312YUKGEQWLEHQWE@#$%^&&&#');
-define('NONCE_KEY',        'asddddwqqwdsadsadwd;kpokpoklllkkok12312312YUKGEQWLEHQWE@#$%^&&&#');
-define('AUTH_SALT',        'asddddwqqwdsadsadwd;kpokpoklllkkok12312312YUKGEQWLEHQWE@#$%^&&&#');
-define('SECURE_AUTH_SALT', 'asddddwqqwdsadsadwd;kpokpoklllkkok12312312YUKGEQWLEHQWE@#$%^&&&#');
-define('LOGGED_IN_SALT',   'asddddwqqwdsadsadwd;kpokpoklllkkok12312312YUKGEQWLEHQWE@#$%^&&&#');
-define('NONCE_SALT',       'asddddwqqwdsadsadwd;kpokpoklllkkok12312312YUKGEQWLEHQWE@#$%^&&&#');
+define( 'WP_HOME', 'http://192.168.99.2:5050');
+define( 'WP_SITEURL', 'http://192.168.99.2:5050');
+define('AUTH_KEY',         'asddddw;kpokpoklllkkqqwdsadsadwdok12312312YUKGEQWLEHQWE@#$%^&&&#');
+define('SECURE_AUTH_KEY',  'asddddw;kpokpoklllkkqqwdsadsadwdok12312312YUKGEQWLEHQWE@#$%^&&&#');
+define('LOGGED_IN_KEY',    'asddddw;kpokpoklllkkqqwdsadsadwdok12312312YUKGEQWLEHQWE@#$%^&&&#');
+define('NONCE_KEY',        'asddddw;kpokpoklllkkqqwdsadsadwdok12312312YUKGEQWLEHQWE@#$%^&&&#');
+define('AUTH_SALT',        'asddddw;kpokpoklllkkqqwdsadsadwdok12312312YUKGEQWLEHQWE@#$%^&&&#');
+define('SECURE_AUTH_SALT', 'asddddw;kpokpoklllkkqqwdsadsadwdok12312312YUKGEQWLEHQWE@#$%^&&&#');
+define('LOGGED_IN_SALT',   'asddddw;kpokpoklllkkqqwdsadsadwdok12312312YUKGEQWLEHQWE@#$%^&&&#');
+define('NONCE_SALT',       'asddddw;kpokpoklllkkqqwdsadsadwdok12312312YUKGEQWLEHQWE@#$%^&&&#');
 
 /**#@-*/
 

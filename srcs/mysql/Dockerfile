@@ -11,8 +11,7 @@ COPY	create_database			/
 
 RUN		apk add mysql mysql-client openrc; \
 		apk add supervisor
-		
-#??
+
 RUN mkdir -p /run/openrc && touch /run/openrc/softlevel && rc-update && touch /run/openrc/softlevel
 RUN chmod +x /start.sh && chmod +x ./etc/init.d/
 

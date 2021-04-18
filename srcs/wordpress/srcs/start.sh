@@ -1,3 +1,3 @@
-#start_server
-#
-sh
+#!/bin/sh
+/usr/bin/supervisord -c /etc/supervisord.conf
+
