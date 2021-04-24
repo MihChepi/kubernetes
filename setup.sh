@@ -1,13 +1,13 @@
 minikube stop
 minikube delete
 
-minikube start --vm-driver=virtualbox --vm-driver=virtualbox --cpus=4 --memory=4G --disk-size=15G
+minikube start --driver=virtualbox --cpus=4 --memory=4G --disk-size=15G
 
 eval $(minikube docker-env)
 
 
-#docker pull metallb/speaker:v0.8.2
-#docker pull metallb/controller:v0.8.2
+docker pull metallb/speaker:v0.8.2
+docker pull metallb/controller:v0.8.2
 
 #metallb
 minikube addons enable metallb
@@ -32,5 +32,14 @@ kubectl apply -f ./srcs/wordpress/wordpress.yaml
 #ftp
 docker build -t ftp_image ./srcs/ftp/.
 kubectl apply -f ./srcs/ftp/ftp.yaml
+
+#influxdb
+#docker build -t influxdb_image ./srcs/influxdb/.
+#kubectl apply -f ./srcs/influxdb/influxdb.yaml
+
+#telegraph
+#docker build -t telegraf_img ./srcs/telegraf/.
+#kubectl apply -f ./srcs/telegraf/telegraf-deployment.yaml
+#kubectl apply -f ./srcs/telegraf/telegraf-configmap.yaml
 
 

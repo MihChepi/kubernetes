@@ -1,0 +1,4 @@
+CREATE DATABASE grafana;
+CREATE USER 'admin';
+GRANT ALL PRIVILEGES ON grafana.* TO 'admin'@'%' IDENTIFIED BY 'admin';
+FLUSH PRIVILEGES;

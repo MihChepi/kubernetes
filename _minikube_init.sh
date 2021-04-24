@@ -1,6 +1,6 @@
 
 #create goinfre minikube
-rm -rf ~/goinfree/.minikube
+rm -rf ~/goinfre/.minikube
 rm -rf ~/.minikube
 mkdir -p ~/goinfre/.minikube
 ln -s ~/goinfre/.minikube ~/

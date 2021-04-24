@@ -32,7 +32,7 @@ RUN		apk add wget tar ; \
 		rm -rf phpMyAdmin-5.0.2-all-languages.tar.gz ;\
 		chmod -R 777 /usr/share/webapps/ ; \
 		ln -s /usr/share/webapps/phpmyadmin/ /var/www/phpmyadmin ;\
-		mv config.inc.php /usr//share/webapps/phpmyadmin ; \
+		mv config.inc.php /usr/share/webapps/phpmyadmin ; \
 		apk add supervisor ; \
 		mv supervisord.conf /etc/. 
 
