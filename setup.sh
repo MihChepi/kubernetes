@@ -1,13 +1,9 @@
-minikube stop
-minikube delete
-
 minikube start --driver=virtualbox --cpus=4 --memory=4G --disk-size=15G
 
 eval $(minikube docker-env)
 
-
-docker pull metallb/speaker:v0.8.2
-docker pull metallb/controller:v0.8.2
+#docker pull metallb/speaker:v0.8.2
+#docker pull metallb/controller:v0.8.2
 
 #metallb
 minikube addons enable metallb
@@ -30,16 +26,25 @@ docker build -t wordpress_image ./srcs/wordpress
 kubectl apply -f ./srcs/wordpress/wordpress.yaml
 
 #ftp
-docker build -t ftp_image ./srcs/ftp/.
-kubectl apply -f ./srcs/ftp/ftp.yaml
+docker build -t ftps_image ./srcs/ftps/.
+kubectl apply -f ./srcs/ftps/ftps.yaml
+
+#grafana
+docker build -t grafana_image ./srcs/grafana/.
+kubectl apply -f ./srcs/grafana/grafana.yaml
 
 #influxdb
-#docker build -t influxdb_image ./srcs/influxdb/.
-#kubectl apply -f ./srcs/influxdb/influxdb.yaml
-
-#telegraph
-#docker build -t telegraf_img ./srcs/telegraf/.
-#kubectl apply -f ./srcs/telegraf/telegraf-deployment.yaml
-#kubectl apply -f ./srcs/telegraf/telegraf-configmap.yaml
+docker build -t influxdb_image ./srcs/influxdb/.
+kubectl apply -f ./srcs/influxdb/influxdb.yaml
 
 
+# kubectl exec deploy/nginx -- pkill nginx
+# kubectl exec deploy/ftps -- pkill vsftpd
+# kubectl exec deploy/grafana -- pkill grafana-server
+# kubectl exec deploy/influxdb -- pkill influxd
+# kubectl exec deploy/mysql -- pkill mysqld
+# kubectl exec deploy/wordpress -- pkill nginx
+# kubectl exec deploy/phpmyadmin -- pkill nginx
+# kubectl exec deploy/phpmyadmin -- pkill fpm
+# kubectl exec deploy/wordpress -- pkill fpm
+# kubectl exec deploy/influxdb -- pkill telegraf

@@ -1,7 +1,7 @@
+#
 # nginx 
 # + ssl keyi
-
-
+#
 FROM alpine:3.12
 
 RUN apk update
